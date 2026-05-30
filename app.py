@@ -65,13 +65,13 @@ if __name__ == "__main__":
     # Make sure you have your target PDF named 'resume.pdf' in the folder
     pdf_filename = "resume.pdf" 
     
-    
+
     if os.path.exists(pdf_filename):
         print(f"1. Extracting text from binary stream: {pdf_filename}...")
         raw_resume_text = extract_text_from_pdf(pdf_filename)
         
         print("2. Spawning Gemini engine for semantic ATS evaluation...")
-        analysis_result = match_resume_to_job(raw_resume_text, target_job_description)
+        analysis_result = match_resume_to_job(raw_resume_text)
         
         print("\n================== ATS MATCH ANALYZER INSIGHTS ==================")
         print(analysis_result)
