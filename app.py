@@ -65,16 +65,6 @@ if __name__ == "__main__":
     # Make sure you have your target PDF named 'resume.pdf' in the folder
     pdf_filename = "resume.pdf" 
     
-    # Target Job Description you are matching against
-    target_job_description = """
-    Position: Full-Stack Web Developer (Associate)
-    Requirements:
-    - Robust foundations in JavaScript/TypeScript, Python, or Java.
-    - Solid hands-on development experience with web frameworks like React, Angular, or Node.js.
-    - Experience managing data with SQL (PostgreSQL, MySQL) or NoSQL (MongoDB) databases.
-    - Clear understanding of RESTful APIs, version control (Git), and system routing.
-    - Excellent analytical mindset, strong logic, and a passion for optimizing backend performance.
-    """
     
     if os.path.exists(pdf_filename):
         print(f"1. Extracting text from binary stream: {pdf_filename}...")
