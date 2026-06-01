@@ -60,7 +60,8 @@ with col2:
                     st.success("Analysis Complete!")
                     
                     # Display Candidate Name and Big Score Metric
-                    st.metric(label="Match Alignment Score", value=f"{data.get('match_percentage', 0)}%")
+                    final_score = data.get('match_percentage') or data.get('semantic_alignment_score') or 0
+                    st.metric(label="Match Alignment Score", value=f"{final_score}%")
                     st.markdown(f"**Candidate Evaluated:** {data.get('candidate_name', 'Unknown')}")
                     
                     # Display Experience Fit Analysis Block
